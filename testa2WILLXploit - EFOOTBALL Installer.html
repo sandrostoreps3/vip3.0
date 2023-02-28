@@ -324,7 +324,7 @@ function load_check()
  if(total_loops<max_loops)
  {
   showResult(progress_msg_frag1+((100/max_loops)*total_loops).toString()+progress_msg_frag2);
-
+  t_out=setTimeout(initROP,150,false);
  }
  else
  {
@@ -419,7 +419,7 @@ function initROP(init)
  {
 
   if(init===true){frame_fails=0;search_base_off=0;search_size_ext=0;}
-
+  if(t_out!==0){clearTimeout(t_out);t_out=0;}
   offset_array=[];
   xtra_data_addr=0;
   stack_frame_addr=0;
@@ -510,7 +510,7 @@ function initROP(init)
   var j1=checkMemory(jump_1_addr-0x4,0x1000,jump_1.length);
   if((j2===jump_2)&&(j1===jump_1)&&(x===xtra_data)&&(sf===stack_frame))
   {
-
+   if(t_out!==0){clearTimeout(t_out);}
    showResult('<h1>WillGame está Preparando...');
    triggerX();
   }
@@ -526,7 +526,7 @@ function initROP(init)
 }
 function triggerX()
 {
-
+ setTimeout(trigger,100,jump_1_addr);
  setTimeout(showResult,2000,"<h1>WillGame diz como instalar o HEN</h1><h2>1. Fechar o navegador<br>2. Abra o Remote Play e saia imediatamente<br>3. Use o novo ícone para instalar o PES 2023</span><br>4. Reinicie o PS3 após a instalação</h2>");
  t_out=0;
  total_loops=0;
