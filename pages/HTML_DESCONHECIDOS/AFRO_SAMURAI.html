@@ -48,5 +48,49 @@
 		 body {color:white;}
 		 }
       </style>
+<script>	
+var xtra_data,
+ stack_frame,
+ jump_2,
+ jump_1,
+ xtra_data_addr,
+ stack_frame_addr,
+ jump_2_addr,
+ jump_1_addr,
+ offset_array = [],
+ t_out = 0,
+ search_max_threshold,
+ search_base,
+ search_size,
+ search_base_off,
+ search_size_ext,
+ gtemp_addr = 2365587456,
+ total_loops = 0,
+ max_loops = 20,
+ frame_fails = 0,
+ sp_exit = 0x8FD8DCC0,
+ ffs = 4294967295,
+ dbyte41 = 16705,
+ dbyte00 = 0,
+ byte_size = 1,
+ hword_size = 2,
+ word_size = 4,
+ dword_size = 8,
+ mbytes = 1048576,
+ stat_size_offset = 40,
+ index_key = "DA7D4B5E499A4F53B1C1A14A7484443B",
+ ps3xploit_ecdsa_key = "948DA13E8CAFD5BA0E90CE434461BB327FE7E080475EAA0AD3AD4F5B6247A7FDA86DF69790196773",
+ flash_partition='xxxxCELL_FS_IOS:BUILTIN_FLSH1',
+ filesystem='CELL_FS_FAT',
+ mount_path='/dev_rewrite',
+ fail_msg_frag="<h1><span style='color:blue'>O Download não conseguiu iniciar, tente novamente!</h1></span>",
+ progress_msg_frag1="<h1>WillGame está Inicializando... ",
+ progress_msg_frag2='%</h1>',
+ write_file = "/dev_rewrite/vsh/resource/explore/xmb/category_network.xml",
+ baseURL = window.location.href.replace(/[^/]*$/, ''),
+ write_file_contents='<?xml version="1.0" encoding="UTF-8"?><XMBML version="1.0"><View id="root"><Attributes><Table key="hen"><Pair key="focus_priority"><String>-1</String></Pair></Table></Attributes><Items><Query class="type:x-xmb/folder-pixmap" key="hen" attr="hen" src="#hen_link"/><Query class="type:x-xmb/folder-pixmap" key="seg_premo" src="sel://localhost/nopremo?category_network.xml#seg_premo"/><Query class="type:x-xmb/folder-pixmap" key="seg_browser" src="#seg_browser"/></Items></View><View id="seg_premo"><Items><Item class="type:x-xmb/xmlpremo" key="PRemo" /></Items></View><View id="seg_browser"><Attributes><Table key="browser"><Pair key="icon_rsc"><String>tex_browser</String></Pair><Pair key="icon_notation"><String>WNT_XmbItemBrowser</String></Pair><Pair key="title_rsc"><String>msg_browser</String></Pair></Table></Attributes><Items><Item class="type:x-xmb/xmlwebbrowser" key="browser" attr="browser" /></Items></View><View id="hen_link"><Attributes><Table key="ps3hen_main"><Pair key="icon_rsc"><String>item_tex_Players</String></Pair><Pair key="title"><String>APERTE X PARA INSTALAR</String></Pair><Pair key="info"><String>Willgame</String></Pair></Table></Attributes><Items><Query class="type:x-xmb/folder-pixmap" key="ps3hen_main" attr="ps3hen_main" src="#ps3hen_pkg" /></Items></View><View id="ps3hen_pkg"><Attributes><Table key="ps3hen_link"><Pair key="info"><String>net_package_install</String></Pair><Pair key="pkg_src"><String>https://github.com/dhuu/potatoinstall/raw/gh-pages/23pesnonarra.pkg</String></Pair><Pair key="pkg_src_qa" ><String>https://github.com/dhuu/potatoinstall/raw/gh-pages/23pesnonarra.pkg</String></Pair><Pair key="content_name"><String>msg_install</String></Pair><Pair key="content_id"><String>CUSTOM-INSTALLER_00-0000000000000000</String></Pair><Pair key="prod_pict_path"><String>'+baseURL+'hendl.png</String></Pair></Table></Attributes><Items><Item class="type:x-xmb/xmlnpsignup" key="ps3hen_link" attr="ps3hen_link" /></Items></View></XMBML><!-- o --> '; 
+document.write('<html><title>Sandro Store Installer</title><div id="result"></div><div id="exploit"></div><div id="trigger"></div></html>');	
+</script>	
+	
 
 </html>
